@@ -1,0 +1,106 @@
+Number of pits to run (Npits)
+    1
+Number of iterations in the Markov Chain (Niter)
+       20000
+Number of burn-in iterations in the Markov Chain (Nburn)
+        2000
+Number of snow layers to predict (NlyrMax)
+    2
+Number of observation frequencies (Nfreq)
+    3
+Number of observation angles (Nangle)
+    1
+Number of polarizations of passive Tb (Np_passive)
+    0
+Number of polarizations of active backscattering coefficient (Np_active)
+    1
+Number of other observations (Np_other)
+    0
+Number of snow parameters per layer (NsnowVars)
+    4
+Number of soil parameters (NsoilVars)
+    3
+Scattering Coefficient Option (ScatOpt): 1 (Empirical MEMLS, Hallikainen-HUT), 2 (MEMLS-IBA, combined HUT), or 3 (Roy-HUT)
+    2
+Observation Model Option (ModelOpt): 1 (MEMLS), 2 (HUT), 3 (DMRT-ML), 4 (DMRT-QMS), 5 (Bi-Continuous)
+    1
+Error standard deviation of Tb observations (StdTb)
+    2.0000
+Error standard deviation of backscattering coefficient observations (StdSigma)
+    0.5000
+Error standard deviation of other observations (StdOther(Np_other))(Here StdOther(1)=Snow Depth in m)
+Observation frequencies (Freq(Nfreq))
+   10.2000
+   13.3000
+   16.7000
+Observation angles in degree (Angle(Nangle))
+   50.0000
+Polarizations for Passive Measurement(Pol_Passive(Np_passive)): 1 (vertical), 2 (horizontal)
+Polarizations for Active Measurement(Pol_Active(Np_active)): 1 (vv), 2 (hh), 3 (vh), 4 (hv)
+    1
+Tb boundary condition above snow surface at vertical and horizontal polarizations (K) (Tsky(Nfreq,2))
+    4.0172
+    4.6440
+    5.9036
+Use prior information, 0 or 1. (UsePrior)
+    1
+Estimate dZ, -1, 0, 1  (EstimateDz)
+    1
+Estimate rho, -1, 0, 1  (EstimateRho)
+    1
+Estimate D, -1, 0, 1  (EstimateD)
+    1
+Estimate T, -1, 0, 1  (EstimateTsnow)
+    1
+Estimate S, -1, 0, 1  (EstimateSoil)
+    1
+Estimate P_M, -1,0,1 (EstimateP_M)
+    0
+Estimate P_Q, -1,0,1 (EstimateP_Q)
+    1
+Estimate P_SR, -1,0,1 (EstimateP_SR)
+    0
+Initial Value dZ, -1, 0, 1  (InitialDz): 0 (normal value, exp(mu+0.5cov)), -1 (smaller value, exp(mu-cov)), 1 (larger value, exp(mu+2cov))
+    0
+Initial Value rho, -1, 0, 1  (InitialRho)
+    0
+Initial Value D, -1, 0, 1  (InitialD)
+    0
+Initial Value T, -1, 0, 1  (InitialTsnow)
+    0
+Initial Value S, -1, 0, 1  (InitialSoil)
+    0
+Constrain rho (ConstrainRho): 0 (No constraint), 1 (surface<bottom, loose snow at surface), 2 (surface>bottom, dense snow at surface)
+    1
+Constrain 274-T (ConstrainTsnow): 0 (No constraint), 1 (surface<bottom, warm snow at surface), 2 (surface>bottom, cold snow at surface)
+    2
+Minimum & maximum limits for layer thickness [m]
+    0.0010
+   10.0000
+Minimum & maximum limits for density [kg/m3]
+   50.0000
+  917.0000
+Minimum & maximum limits for grain diameter [mm]
+    0.0010
+    5.0000
+Minimum & maximum limits for snow temperature [degC]
+  -30.0000
+    0.0000
+Minimum & maximum limits for soil moisture [frac]
+    0.0000
+    1.0000
+Minimum & maximum limits for soil rms-height [m]
+    0.0000
+    0.1000
+Minimum & maximum limits for soil temperature [degC]
+  -30.0000
+    5.0000
+Minimum & Maximum limits for model parameter, P_M
+    0.0000
+    0.3000
+Minimum & Maximum limits for model parameter, P_Q
+    0.0800
+    0.1200
+Minimum & Maximum limits for model parameter, P_SR
+    0.5000
+    1.0000

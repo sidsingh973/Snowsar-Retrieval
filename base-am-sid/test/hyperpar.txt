@@ -1,0 +1,306 @@
+ 1
+Layer thickness (log-normal),m 
+  0.18972350
+  0.00820469
+Grain size (log-normal),mm 
+  0.18000000
+  0.00810000
+Density (log-normal),kg/m^3 
+217.00000000
+3136.00000000
+274.-Temperature (log-normal),K 
+ 10.85000000
+ 25.00000000
+Soil Temperature, 279-Tempereature (log-normal),K 
+ 15.85000000
+ 25.00000000
+Soil volumetric water content,FRAC 
+  0.08000000
+  0.00160000
+Soil surface rougness,m 
+  0.01000000
+  0.00002500
+Model Parameter with normal distribution, P_M 
+  0.10000000
+  0.00250000
+Model Parameter with uniform distribution, P_Q 
+  0.10000000
+  0.00010000
+Model Parameter with uniform distribution, P_SR 
+  1.00000000
+  0.06250000
+ 2
+Layer thickness (log-normal),m 
+  0.09486175
+  1.00000000
+  0.00410234
+  0.04000000
+Grain size (log-normal),mm 
+  0.18000000
+  0.18000000
+  0.00810000
+  0.00810000
+Density (log-normal),kg/m^3 
+217.00000000
+217.00000000
+3136.00000000
+3136.00000000
+274.-Temperature (log-normal),K 
+ 10.85000000
+ 10.85000000
+ 25.00000000
+ 25.00000000
+Soil Temperature, 279-Tempereature (log-normal),K 
+ 15.85000000
+ 25.00000000
+Soil volumetric water content,FRAC 
+  0.08000000
+  0.00160000
+Soil surface rougness,m 
+  0.01000000
+  0.00002500
+Model Parameter with normal distribution, P_M 
+  0.10000000
+  0.00250000
+Model Parameter with uniform distribution, P_Q 
+  0.10000000
+  0.00010000
+Model Parameter with uniform distribution, P_SR 
+  1.00000000
+  0.06250000
+ 3
+Layer thickness (log-normal),m 
+  0.06324117
+  1.00000000
+  1.00000000
+  0.00273490
+  0.04000000
+  0.04000000
+Grain size (log-normal),mm 
+  0.18000000
+  0.18000000
+  0.18000000
+  0.00810000
+  0.00810000
+  0.00810000
+Density (log-normal),kg/m^3 
+217.00000000
+217.00000000
+217.00000000
+3136.00000000
+3136.00000000
+3136.00000000
+274.-Temperature (log-normal),K 
+ 10.85000000
+ 10.85000000
+ 10.85000000
+ 25.00000000
+ 25.00000000
+ 25.00000000
+Soil Temperature, 279-Tempereature (log-normal),K 
+ 15.85000000
+ 25.00000000
+Soil volumetric water content,FRAC 
+  0.08000000
+  0.00160000
+Soil surface rougness,m 
+  0.01000000
+  0.00002500
+Model Parameter with normal distribution, P_M 
+  0.10000000
+  0.00250000
+Model Parameter with uniform distribution, P_Q 
+  0.10000000
+  0.00010000
+Model Parameter with uniform distribution, P_SR 
+  1.00000000
+  0.06250000
+ 4
+Layer thickness (log-normal),m 
+  0.04743088
+  1.00000000
+  1.00000000
+  1.00000000
+  0.00205117
+  0.04000000
+  0.04000000
+  0.04000000
+Grain size (log-normal),mm 
+  0.18000000
+  0.18000000
+  0.18000000
+  0.18000000
+  0.00810000
+  0.00810000
+  0.00810000
+  0.00810000
+Density (log-normal),kg/m^3 
+217.00000000
+217.00000000
+217.00000000
+217.00000000
+3136.00000000
+3136.00000000
+3136.00000000
+3136.00000000
+274.-Temperature (log-normal),K 
+ 10.85000000
+ 10.85000000
+ 10.85000000
+ 10.85000000
+ 25.00000000
+ 25.00000000
+ 25.00000000
+ 25.00000000
+Soil Temperature, 279-Tempereature (log-normal),K 
+ 15.85000000
+ 25.00000000
+Soil volumetric water content,FRAC 
+  0.08000000
+  0.00160000
+Soil surface rougness,m 
+  0.01000000
+  0.00002500
+Model Parameter with normal distribution, P_M 
+  0.10000000
+  0.00250000
+Model Parameter with uniform distribution, P_Q 
+  0.10000000
+  0.00010000
+Model Parameter with uniform distribution, P_SR 
+  1.00000000
+  0.06250000
+ 5
+Layer thickness (log-normal),m 
+  0.03794470
+  1.00000000
+  1.00000000
+  1.00000000
+  1.00000000
+  0.00164094
+  0.04000000
+  0.04000000
+  0.04000000
+  0.04000000
+Grain size (log-normal),mm 
+  0.18000000
+  0.18000000
+  0.18000000
+  0.18000000
+  0.18000000
+  0.00810000
+  0.00810000
+  0.00810000
+  0.00810000
+  0.00810000
+Density (log-normal),kg/m^3 
+217.00000000
+217.00000000
+217.00000000
+217.00000000
+217.00000000
+3136.00000000
+3136.00000000
+3136.00000000
+3136.00000000
+3136.00000000
+274.-Temperature (log-normal),K 
+ 10.85000000
+ 10.85000000
+ 10.85000000
+ 10.85000000
+ 10.85000000
+ 25.00000000
+ 25.00000000
+ 25.00000000
+ 25.00000000
+ 25.00000000
+Soil Temperature, 279-Tempereature (log-normal),K 
+ 15.85000000
+ 25.00000000
+Soil volumetric water content,FRAC 
+  0.08000000
+  0.00160000
+Soil surface rougness,m 
+  0.01000000
+  0.00002500
+Model Parameter with normal distribution, P_M 
+  0.10000000
+  0.00250000
+Model Parameter with uniform distribution, P_Q 
+  0.10000000
+  0.00010000
+Model Parameter with uniform distribution, P_SR 
+  1.00000000
+  0.06250000
+ 6
+Layer thickness (log-normal),m 
+  0.03162058
+  1.00000000
+  1.00000000
+  1.00000000
+  1.00000000
+  1.00000000
+  0.00136745
+  0.04000000
+  0.04000000
+  0.04000000
+  0.04000000
+  0.04000000
+Grain size (log-normal),mm 
+  0.18000000
+  0.18000000
+  0.18000000
+  0.18000000
+  0.18000000
+  0.18000000
+  0.00810000
+  0.00810000
+  0.00810000
+  0.00810000
+  0.00810000
+  0.00810000
+Density (log-normal),kg/m^3 
+217.00000000
+217.00000000
+217.00000000
+217.00000000
+217.00000000
+217.00000000
+3136.00000000
+3136.00000000
+3136.00000000
+3136.00000000
+3136.00000000
+3136.00000000
+274.-Temperature (log-normal),K 
+ 10.85000000
+ 10.85000000
+ 10.85000000
+ 10.85000000
+ 10.85000000
+ 10.85000000
+ 25.00000000
+ 25.00000000
+ 25.00000000
+ 25.00000000
+ 25.00000000
+ 25.00000000
+Soil Temperature, 279-Tempereature (log-normal),K 
+ 15.85000000
+ 25.00000000
+Soil volumetric water content,FRAC 
+  0.08000000
+  0.00160000
+Soil surface rougness,m 
+  0.01000000
+  0.00002500
+Model Parameter with normal distribution, P_M 
+  0.10000000
+  0.00250000
+Model Parameter with uniform distribution, P_Q 
+  0.10000000
+  0.00010000
+Model Parameter with uniform distribution, P_SR 
+  1.00000000
+  0.06250000

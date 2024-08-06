@@ -1,0 +1,43 @@
+! -------------------------------------------------------------------------
+!
+SUBROUTINE SNOWAO(V,A,NUM)
+!
+! -------------------------------------------------------------------------
+!
+!     CODE ORIGINALLY OBTAINED IN MATLAB FROM MATZLER
+!
+!   COMPUTES THE DEPOLARIZATION FACTOR OF OBLATE SNOW GRAINS
+!   NOTE 10, MÄTZLER 1997
+!
+!   A = SNOWAO(V)
+!       A:    DEPOLARIZATION FACTOR OF OBLATE SNOW GRAINS
+!       V:    VOLUME FRACTION OF ICE
+!
+!   VERSION HISTORY:
+!      1.0    WI 29.5.98
+!      2.0    MD 1 APR 05 TRANSLATED TO FORTRAN FROM MATLAB
+!
+!   USES: NONE
+!
+!   COPYRIGHT (C) 1997 BY THE INSTITUTE OF APPLIED PHYSICS,
+!   UNIVERSITY OF BERN, SWITZERLAND
+
+
+IMPLICIT NONE
+INTEGER, INTENT(IN) :: NUM
+REAL(8), INTENT(IN) :: V(NUM)
+REAL(8), INTENT(OUT) :: A(NUM)
+INTEGER I
+
+DO I=1,NUM
+    A(I)=0.3d0
+    IF (V(I)<0.55d0) THEN
+        A(I)=0.476d0-0.64d0*V(I)
+    END IF
+
+    IF (V(I)<=0.333d0) THEN
+        A(I)=0.1d0+0.5d0*V(I)
+    END IF
+END DO
+
+END SUBROUTINE SNOWAO

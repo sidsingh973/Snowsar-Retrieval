@@ -1,0 +1,6 @@
+RunParams.txt
+tb_obs.txt
+hyperpar.txt
+acceptance.txt
+post_tb.out
+post_theta.out

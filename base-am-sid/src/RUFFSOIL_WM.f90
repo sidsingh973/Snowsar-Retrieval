@@ -1,0 +1,89 @@
+! -------------------------------------------------------------------------
+!
+SUBROUTINE RUFFSOIL_WM(F,MV,TK,KSIGMA,GND_SIG,THETA,EPS_TOP,&
+    RHO, SAND, SILT, CLAY,EPS_SOIL,R_H_MOD,R_V_MOD,RS_H_MOD,RS_V_MOD)  !ADDED MAY18,2015
+!
+! -------------------------------------------------------------------------
+!
+!     CODE ORIGINALLY OBTAINED IN MATLAB FROM PULLIAINEN
+!
+!     FUNCTION FOR CALCULATING REFLECTIVITIES OF ROUGH, BARE SOILS
+!     ACCORDING TO THEORY BY WEGMULLER & MÄTZLER
+!     F = FREQUENCY [GHZ]
+!     MV = VOLUMETRIC MOISTURE [FRAC]
+!     TK = TEMP [K]
+!     KSIGMA = NORMALIZED SURFACE SDEV [m]
+!     GND_SIG=Gound roughness [m]
+!     THETA = NADIR ANGLE [DEG]
+!     EPS_TOP = EPSILON OF OVERLYING MEDIUM (Complex)
+!     EPS_SOIL = DEFINE EPSILON EXPLICITLY (Complex)
+!
+!     Nov24,2015, New variables:
+!     RHO = SOIL BULK DENSITY [kg/m^3]
+!     SAND = SAND CONTENT [%]
+!     SILT = SILT CONTENT [%]
+!     CLAY = CLAY CONTENT [%]
+!
+!    VERSION HISTORY:
+!      1.0    ?? ?.?.?
+!      2.0    MD 1 APR 05 TRANSLATED TO FORTRAN FROM MATLAB
+
+
+IMPLICIT NONE
+REAL(8),INTENT(IN) :: F,MV,TK,KSIGMA,THETA
+REAL(8),INTENT(IN) :: RHO,SAND,SILT,CLAY
+REAL(8),INTENT(IN) ::  GND_SIG
+COMPLEX(8),INTENT(IN) :: EPS_TOP
+REAL(8),INTENT(OUT) :: R_H_MOD,R_V_MOD
+REAL(8),INTENT(OUT) :: RS_H_MOD,RS_V_MOD
+REAL(8) TD,GND_EPS,PI,FRESNEL_H,FRESNEL_V,THETA_R
+COMPLEX(8) EPS_SOIL,EPS_EFF
+
+
+
+PI=3.14159d0
+TD=TK-273.15d0  !K TO C
+
+
+!CALL EPSSOIL_DOBSON(MV,TD,F,RHO,SAND,SILT,CLAY,EPS_SOIL)
+Call Epssoil_Pan(MV,TD,F,RHO,SAND,SILT,CLAY,EPS_SOIL)
+
+EPS_EFF=EPS_SOIL/EPS_TOP
+
+CALL GAMMAH(EPS_EFF,THETA,FRESNEL_H)
+CALL GAMMAV(EPS_EFF,THETA,FRESNEL_V)
+
+THETA_R=THETA/180.0d0*PI
+
+R_H_MOD=FRESNEL_H*EXP(-KSIGMA**((0.1d0*COS(THETA_R))**0.5d0))
+
+
+IF (THETA<=60d0) THEN
+    R_V_MOD=R_H_MOD*COS(THETA_R)**0.65d0
+ELSEIF(THETA==70d0)THEN
+    R_V_MOD=R_H_MOD*0.621d0
+ELSE
+    !Revised by Jinmei, to be revised if necessary
+    PRINT *, 'Error: incidence angle larger than what can be handel by WM model'
+    R_V_MOD=R_H_MOD*0.621d0
+END IF
+
+!Jinmei added, roughness smaller than 0.0001 mm will be considered smooth
+!IF(GND_SIG.LE.1e-6) THEN
+!    R_V_MOD=FRESNEL_V
+!ENDIF
+IF(KSIGMA.LT.0.07d0) THEN
+    R_V_MOD=(R_V_MOD-FRESNEL_V) * (KSIGMA/0.07d0) + FRESNEL_V
+END IF
+
+!Add code the calculate the specular part of the soil reflectivity
+RS_H_MOD=FRESNEL_H*EXP(-(2.0d0*KSIGMA*COS(THETA_R))**2.0d0)
+RS_V_MOD=FRESNEL_V*EXP(-(2.0d0*KSIGMA*COS(THETA_R))**2.0d0)
+
+!IF(NUM.eq.2 .and. .false.)Then
+!Print *,'EPS_SOIL',EPS_SOIL
+!Print *,'EPS_TOP',EPS_TOP
+!Print *,'EPS_EFF',EPS_EFF
+!Endif
+
+END SUBROUTINE RUFFSOIL_WM

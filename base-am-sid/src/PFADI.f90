@@ -1,0 +1,33 @@
+! -------------------------------------------------------------------------
+!
+SUBROUTINE PFADI(TEI,DI,DEI,NUM)
+!
+! -------------------------------------------------------------------------
+!
+!     CODE ORIGINALLY OBTAINED IN MATLAB FROM MATZLER
+!
+!   CALCULATES THE EFFECTIVE PATH LENGTH IN A LAYER
+!
+!   DEI = PFADI(TEI,DI)
+!       DEI:  EFFECTIVE PATH LENGTH [M]
+!       TEI:  LOCAL INCIDENCE ANGLE
+!       DI:   THICKNESS [M]
+!
+!   VERSION HISTORY:
+!      1.0    WI 15.7.95
+!      2.0    MD 1 APR 05 TRANSLATED TO FORTRAN FROM MATLAB
+!
+!   USES - NONE
+!
+!   COPYRIGHT (C) 1997 BY THE INSTITUTE OF APPLIED PHYSICS,
+!   UNIVERSITY OF BERN, SWITZERLAND
+
+IMPLICIT NONE
+
+INTEGER, INTENT(IN) :: NUM
+REAL(8), INTENT(IN) :: TEI(NUM+1),DI(NUM)
+REAL(8), INTENT(OUT) :: DEI(NUM)
+
+DEI=DI/COS(TEI(1:NUM))
+
+END SUBROUTINE PFADI
